@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JVoNwIhBEeeaupCoZX-ouA" name="RootElement">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Jd4x4IhBEeeaupCoZX-ouA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_S5z5wIhBEeeaupCoZX-ouA" name="Tarefa-Semana6-OO">
+      <packagedElement xmi:type="uml:Package" xmi:id="_S_FbUIhBEeeaupCoZX-ouA" name="com">
+        <packagedElement xmi:type="uml:Package" xmi:id="_S_GCYIhBEeeaupCoZX-ouA" name="leandroserra">
+          <packagedElement xmi:type="uml:Package" xmi:id="_S_GpcIhBEeeaupCoZX-ouA" name="modelo">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_S_XvMIhBEeeaupCoZX-ouA" name="IEmbaralhador" visibility="public">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_TIfO8IhBEeeaupCoZX-ouA" name="embaralhadorDePalavra" visibility="private">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_TInKwIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_TIrcMIhBEeeaupCoZX-ouA" name="palavra" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_TIwUsIhBEeeaupCoZX-ouA" name="nivelDeDificuldade" visibility="private">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_TJHhEIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_U2zx8IhBEeeaupCoZX-ouA" name="EmbaralhadorInverso" visibility="public">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_U3VWYIhBEeeaupCoZX-ouA" name="EmbaralhadorInverso implements IEmbaralhador" client="_U2zx8IhBEeeaupCoZX-ouA" supplier="_S_XvMIhBEeeaupCoZX-ouA" contract="_S_XvMIhBEeeaupCoZX-ouA"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_U3pfcIhBEeeaupCoZX-ouA" name="embaralhadorDePalavra" specification="_U3XyoIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    List&lt;String> lstPalavra = Arrays.asList(palavra.trim().split(&quot;&quot;));
+    Collections.reverse(lstPalavra);
+    StringBuilder sb = new StringBuilder();
+    for (String s : lstPalavra) sb.append(s);
+    return sb.toString();
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_U3yCUIhBEeeaupCoZX-ouA" name="nivelDeDificuldade" specification="_U3qtkIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    return 3;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_U3XyoIhBEeeaupCoZX-ouA" name="embaralhadorDePalavra" visibility="public" method="_U3pfcIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_U3a18IhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_U3cEEIhBEeeaupCoZX-ouA" name="palavra" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_U3qtkIhBEeeaupCoZX-ouA" name="nivelDeDificuldade" visibility="public" method="_U3yCUIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_U3rUoIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Wcc6EIhBEeeaupCoZX-ouA" name="EmbaralhadorAleatorio" visibility="public">
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_WcjAsIhBEeeaupCoZX-ouA" name="EmbaralhadorAleatorio implements IEmbaralhador" client="_Wcc6EIhBEeeaupCoZX-ouA" supplier="_S_XvMIhBEeeaupCoZX-ouA" contract="_S_XvMIhBEeeaupCoZX-ouA"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WcogQIhBEeeaupCoZX-ouA" name="embaralhadorDePalavra" specification="_Wck14IhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    List&lt;String> lstPalavra = Arrays.asList(palavra.trim().split(&quot;&quot;));
+    Collections.shuffle(lstPalavra);
+    StringBuilder sb = new StringBuilder();
+    for (String s : lstPalavra) sb.append(s);
+    return sb.toString();
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Wcq8gIhBEeeaupCoZX-ouA" name="nivelDeDificuldade" specification="_WcpuYIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    return 10;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Wck14IhBEeeaupCoZX-ouA" name="embaralhadorDePalavra" visibility="public" method="_WcogQIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WcmEAIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WcmrEIhBEeeaupCoZX-ouA" name="palavra" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_WcpuYIhBEeeaupCoZX-ouA" name="nivelDeDificuldade" visibility="public" method="_Wcq8gIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_WcqVcIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_lLycUIhBEeeaupCoZX-ouA" name="fases">
+            <packagedElement xmi:type="uml:Class" xmi:id="_lL374IhBEeeaupCoZX-ouA" name="Fase" visibility="public">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_lL7mQIhBEeeaupCoZX-ouA" name="bonificacao" specification="_lL5KAIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    int bonus = 0;
+    switch(fase) {
+        case 0:
+            bonus = 10;
+            break;
+        case 1:
+            bonus = 2;
+            break;
+        case 2:
+            bonus = 3;
+            break;
+        case 3:
+            bonus = 4;
+            break;
+    }
+    return bonus;
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_lL5KAIhBEeeaupCoZX-ouA" name="bonificacao" visibility="public" isStatic="true" method="_lL7mQIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lL6YIIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_lL6_MIhBEeeaupCoZX-ouA" name="fase">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_qSjh0IhBEeeaupCoZX-ouA" name="utilitarios">
+            <packagedElement xmi:type="uml:Class" xmi:id="_qSkv8IhBEeeaupCoZX-ouA" name="Utilitarios" visibility="public">
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_qSmlIIhBEeeaupCoZX-ouA" name="simDesejaInserirPalavrasNoBanco" specification="_qSlXAIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    if (str.equalsIgnoreCase(&quot;sim&quot;) || str.equals(&quot;1&quot;))
+        return true;
+    else
+        return false;
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_qSoaUYhBEeeaupCoZX-ouA" name="palavrasComplexas" specification="_qSnMMIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    return str.equalsIgnoreCase(&quot;C&quot;);
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_qSsEsIhBEeeaupCoZX-ouA" name="palavrasSimples" specification="_qSpBYIhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    return str.equalsIgnoreCase(&quot;S&quot;);
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_qSlXAIhBEeeaupCoZX-ouA" name="simDesejaInserirPalavrasNoBanco" visibility="public" isStatic="true" method="_qSmlIIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qSl-EIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qSl-EYhBEeeaupCoZX-ouA" name="str" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_qSnMMIhBEeeaupCoZX-ouA" name="palavrasComplexas" visibility="public" isStatic="true" method="_qSoaUYhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qSnzQIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qSoaUIhBEeeaupCoZX-ouA" name="str" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_qSpBYIhBEeeaupCoZX-ouA" name="palavrasSimples" visibility="public" isStatic="true" method="_qSsEsIhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qSpocIhBEeeaupCoZX-ouA" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_qSq2kIhBEeeaupCoZX-ouA" name="str" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_sVx90IhBEeeaupCoZX-ouA" name="regra">
+            <packagedElement xmi:type="uml:Package" xmi:id="_sVyk4IhBEeeaupCoZX-ouA" name="de">
+              <packagedElement xmi:type="uml:Package" xmi:id="_sVzL8IhBEeeaupCoZX-ouA" name="negocio">
+                <packagedElement xmi:type="uml:Class" xmi:id="_sVzzAIhBEeeaupCoZX-ouA" name="ArquivoDePalavras" visibility="public">
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sWAAQIhBEeeaupCoZX-ouA" name="retornarPalavra" specification="_sV0aEIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return Files.readAllLines(Paths.get(Paths.get(&quot;&quot;).toAbsolutePath() + &quot;/fontes/&quot; + arquivo), Charset.availableCharsets().get(Charset.availableCharsets().firstKey()));
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sWB1cIhBEeeaupCoZX-ouA" name="criarArquivoDePalavras" specification="_sWAnUIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    String nomeFile = null, palavra = null;
+    Scanner input = new Scanner(System.in);
+    if (tipoDePalavra == 'C') {
+        palavra = &quot;COMPLEXAS&quot;;
+        nomeFile = &quot;bancoDePalavrasCOMPLEXAS.txt&quot;;
+    } else if (tipoDePalavra == 'S') {
+        palavra = &quot;SIMPLES&quot;;
+        nomeFile = &quot;bancoDePalavrasSIMPLES.txt&quot;;
+    }
+    File file = new File(Paths.get(Paths.get(&quot;&quot;).toAbsolutePath() + &quot;/fontes/&quot; + nomeFile).toString());
+    try {
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        FileWriter fw = new FileWriter(file, true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        System.out.println(&quot;BANCO DE PALAVRAS &quot; + palavra + &quot;\n\n&quot;);
+        while (true) {
+            System.out.printf(&quot;Informe uma palavra para gravação e FIM para encerrar!\n&quot;);
+            palavra = input.nextLine();
+            if (palavra.equalsIgnoreCase(&quot;FIM&quot;))
+                break;
+            bw.write(palavra);
+            bw.newLine();
+        }
+        bw.close();
+        fw.close();
+    } catch (IOException e) {
+        System.out.println(&quot;Error ao gravar arquivo!&quot;);
+    }
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_sV0aEIhBEeeaupCoZX-ouA" name="retornarPalavra" visibility="public" isStatic="true" method="_sWAAQIhBEeeaupCoZX-ouA" raisedException="_sV3dYIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_sV1BIIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return">
+                      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sV1oMIhBEeeaupCoZX-ouA"/>
+                      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sV2PQIhBEeeaupCoZX-ouA" value="*"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_sV22UIhBEeeaupCoZX-ouA" name="arquivo" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_sWAnUIhBEeeaupCoZX-ouA" name="criarArquivoDePalavras" visibility="public" isStatic="true" method="_sWB1cIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_sWBOYIhBEeeaupCoZX-ouA" name="tipoDePalavra">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_5lVhgBydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Interface" xmi:id="_t39iQIhBEeeaupCoZX-ouA" name="IBancoDePalavras" visibility="public">
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_t3-JUIhBEeeaupCoZX-ouA" name="selecionarPalavraComRandom" visibility="public">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_t3-wYIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_t3-wYYhBEeeaupCoZX-ouA" name="selecionaPalavraFixa" visibility="public">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_t4FeEIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Interface" xmi:id="_wxD2UIhBEeeaupCoZX-ouA" name="IMecanicaDoJogo" visibility="public">
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxEdYIhBEeeaupCoZX-ouA" name="isFimDeJogo" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxFEcIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxIHwIhBEeeaupCoZX-ouA" name="getIsAssertivo" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxIHwYhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxIu0IhBEeeaupCoZX-ouA" name="palavra" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxJV4IhBEeeaupCoZX-ouA" name="getPontuacao" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxJV4YhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxJ88IhBEeeaupCoZX-ouA" name="getIsNovaTentativa" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxJ88YhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxKkAIhBEeeaupCoZX-ouA" name="getPalavraNoJogo" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxLLEIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxLLEYhBEeeaupCoZX-ouA" name="getPalavraCorreta" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxLLEohBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxLyIIhBEeeaupCoZX-ouA" name="getLogicaDoJogo" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxLyIYhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxLyIohBEeeaupCoZX-ouA" name="getObjetivo" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxMZMIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxMZMYhBEeeaupCoZX-ouA" name="getModoDoJogo" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxNAQIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxNAQYhBEeeaupCoZX-ouA" name="getNivelDificuldade" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxNnUIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxNnUYhBEeeaupCoZX-ouA" name="getReset" visibility="private"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxNnUohBEeeaupCoZX-ouA" name="getSomaPontuacao" visibility="private"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxNnU4hBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxOOYIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxOOYYhBEeeaupCoZX-ouA" name="getTotalDePalavras" visibility="private">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxO1cIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxPcgIhBEeeaupCoZX-ouA" name="statusDoJogo" visibility="private"/>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_wxUVAIhBEeeaupCoZX-ouA" name="MecanicaDoJogo" visibility="public" isAbstract="true">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxWKMIhBEeeaupCoZX-ouA" name="embaralhador" visibility="protected" type="_S_XvMIhBEeeaupCoZX-ouA" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxWxQIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>null</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxetEIhBEeeaupCoZX-ouA" name="bancoDePalavras" visibility="private" type="_t39iQIhBEeeaupCoZX-ouA" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxetEYhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>null</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxfUIIhBEeeaupCoZX-ouA" name="palavraNoJogo" visibility="protected" type="_S_cnsIhBEeeaupCoZX-ouA" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxf7MIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>&quot;&quot;</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxgiQIhBEeeaupCoZX-ouA" name="palavraCorreta" visibility="protected" type="_S_cnsIhBEeeaupCoZX-ouA" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxhJUIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>&quot;&quot;</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxhJUYhBEeeaupCoZX-ouA" name="isFimDoJogo" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxhwYIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>false</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxhwYYhBEeeaupCoZX-ouA" name="isNovaTentativa" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxiXcIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>false</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxiXcYhBEeeaupCoZX-ouA" name="isAssertivo" visibility="protected" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxi-gIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>false</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxi-gYhBEeeaupCoZX-ouA" name="pontuacao" visibility="private" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxjlkIhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>0</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxjlkYhBEeeaupCoZX-ouA" name="qtdPermitidaDeErros" visibility="private" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxkMoIhBEeeaupCoZX-ouA" name="totalDePalavras" visibility="private" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxkMoYhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>10</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxkzsIhBEeeaupCoZX-ouA" name="countPalavras" visibility="private" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxkzsYhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>0</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_wxlawIhBEeeaupCoZX-ouA" name="isSimples" visibility="public" isUnique="false">
+                    <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_wxmB0IhBEeeaupCoZX-ouA" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>true</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_wxU8EIhBEeeaupCoZX-ouA" name="MecanicaDoJogo implements IMecanicaDoJogo" client="_wxUVAIhBEeeaupCoZX-ouA" supplier="_wxD2UIhBEeeaupCoZX-ouA" contract="_wxD2UIhBEeeaupCoZX-ouA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxmo4YhBEeeaupCoZX-ouA" name="getPalavraCorreta" specification="_wxmB0YhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return palavraCorreta;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxoeEIhBEeeaupCoZX-ouA" name="setPalavraCorreta" specification="_wxn3AIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    this.palavraCorreta = palavraCorreta;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxxA8IhBEeeaupCoZX-ouA" name="MecanicaDoJogo" specification="_wxpFIIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    embaralhador = new FabricaEmbaralhadores().embaralhadorAutomatico();
+    if (embaralhador.nivelDeDificuldade() == 10)
+        this.isSimples = true;
+    if (embaralhador.nivelDeDificuldade() == 3)
+        this.isSimples = false;
+    bancoDePalavras = new BancoDePalavras(this.isSimples);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxxoAYhBEeeaupCoZX-ouA" name="countDePalavras" specification="_wxxoAIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    this.countPalavras++;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxyPEIhBEeeaupCoZX-ouA" name="getSomaPontuacao" specification="_wxxoAohBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    pontuacao += this.embaralhador.nivelDeDificuldade() * 100;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxy2IYhBEeeaupCoZX-ouA" name="getCountPalavras" specification="_wxyPEYhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return this.countPalavras++;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wxzdMYhBEeeaupCoZX-ouA" name="statusDoJogo" specification="_wxzdMIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    if (this.getCountPalavras() >= this.getTotalDePalavras())
+        this.isFimDoJogo = true;
+    else
+        this.isFimDoJogo = false;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx1SYIhBEeeaupCoZX-ouA" name="getTotalDePalavras" specification="_wx0EQIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return totalDePalavras;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx15cYhBEeeaupCoZX-ouA" name="isFimDeJogo" specification="_wx1SYYhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return !isFimDoJogo;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx3uoYhBEeeaupCoZX-ouA" name="getIsAssertivo" specification="_wx3HkIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    if (palavraNoJogo.equalsIgnoreCase(palavra)) {
+        this.getSomaPontuacao();
+        this.isAssertivo = true;
+        this.countDePalavras();
+    } else {
+        this.isAssertivo = false;
+    }
+    this.statusDoJogo();
+    return this.isAssertivo;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx48wYhBEeeaupCoZX-ouA" name="getPontuacao" specification="_wx4VsIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return pontuacao;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx6K4YhBEeeaupCoZX-ouA" name="getPalavraNoJogo" specification="_wx5j0IhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    this.getReset();
+    setPalavraCorreta(bancoDePalavras.selecionarPalavraComRandom());
+    palavraNoJogo = getPalavraCorreta();
+    return embaralhador.embaralhadorDePalavra(palavraNoJogo);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx7ZAIhBEeeaupCoZX-ouA" name="getReset" specification="_wx6x8IhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    this.isAssertivo = false;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx8nIIhBEeeaupCoZX-ouA" name="getIsNovaTentativa" specification="_wx7ZAYhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return isNovaTentativa;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx91QIhBEeeaupCoZX-ouA" name="getObjetivo" specification="_wx8nIYhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;ADVINHE A PALAVRA EMBARALHADA!&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wx_DYYhBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" specification="_wx-cUIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return qtdPermitidaDeErros;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyARgYhBEeeaupCoZX-ouA" name="setQtdPermitidaDeErros" specification="_wx_qcIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    this.qtdPermitidaDeErros = qtdPermitidaDeErros;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxmB0YhBEeeaupCoZX-ouA" name="getPalavraCorreta" visibility="public" method="_wxmo4YhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxmo4IhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxn3AIhBEeeaupCoZX-ouA" name="setPalavraCorreta" visibility="public" method="_wxoeEIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxn3AYhBEeeaupCoZX-ouA" name="palavraCorreta" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxpFIIhBEeeaupCoZX-ouA" name="MecanicaDoJogo" visibility="public" method="_wxxA8IhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxxoAIhBEeeaupCoZX-ouA" name="countDePalavras" visibility="public" method="_wxxoAYhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxxoAohBEeeaupCoZX-ouA" name="getSomaPontuacao" visibility="public" method="_wxyPEIhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxyPEYhBEeeaupCoZX-ouA" name="getCountPalavras" visibility="public" method="_wxy2IYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wxy2IIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wxzdMIhBEeeaupCoZX-ouA" name="statusDoJogo" visibility="public" method="_wxzdMYhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx0EQIhBEeeaupCoZX-ouA" name="getTotalDePalavras" visibility="public" method="_wx1SYIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx0rUIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx1SYYhBEeeaupCoZX-ouA" name="isFimDeJogo" visibility="public" method="_wx15cYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx15cIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx3HkIhBEeeaupCoZX-ouA" name="getIsAssertivo" visibility="public" method="_wx3uoYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx3HkYhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx3uoIhBEeeaupCoZX-ouA" name="palavra" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx4VsIhBEeeaupCoZX-ouA" name="getPontuacao" visibility="public" method="_wx48wYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx48wIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx5j0IhBEeeaupCoZX-ouA" name="getPalavraNoJogo" visibility="public" method="_wx6K4YhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx6K4IhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx6x8IhBEeeaupCoZX-ouA" name="getReset" visibility="public" method="_wx7ZAIhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx7ZAYhBEeeaupCoZX-ouA" name="getIsNovaTentativa" visibility="public" method="_wx8nIIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx8AEIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx8nIYhBEeeaupCoZX-ouA" name="getObjetivo" visibility="public" method="_wx91QIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx9OMIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx-cUIhBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" visibility="public" method="_wx_DYYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wx_DYIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wx_qcIhBEeeaupCoZX-ouA" name="setQtdPermitidaDeErros" visibility="public" method="_wyARgYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyARgIhBEeeaupCoZX-ouA" name="qtdPermitidaDeErros">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_wyCtwIhBEeeaupCoZX-ouA" name="MecanicaDoJogoNivelEasy" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_wyCtwYhBEeeaupCoZX-ouA" general="_wxUVAIhBEeeaupCoZX-ouA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyD74YhBEeeaupCoZX-ouA" name="getTotalDePalavras" specification="_wyDU0IhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return 8;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyMewIhBEeeaupCoZX-ouA" name="MecanicaDoJogoNivelEasy" specification="_wyEi8IhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    setQtdPermitidaDeErros(5);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyNs4IhBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" specification="_wyNF0IhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return super.getQtdPermitidaDeErros();
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyO7AIhBEeeaupCoZX-ouA" name="getLogicaDoJogo" specification="_wyNs4YhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;SE DIVIRTA ADIVINHANDO &quot; + &quot;PALAVRAS SIMPLES EMBARALHADAS.&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyQJIYhBEeeaupCoZX-ouA" name="getModoDoJogo" specification="_wyPiEIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;EASY&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyRXQIhBEeeaupCoZX-ouA" name="getNivelDificuldade" specification="_wyQwMIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;3&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyDU0IhBEeeaupCoZX-ouA" name="getTotalDePalavras" visibility="public" method="_wyD74YhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyD74IhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyEi8IhBEeeaupCoZX-ouA" name="MecanicaDoJogoNivelEasy" visibility="public" method="_wyMewIhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyNF0IhBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" visibility="public" method="_wyNs4IhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyNF0YhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyNs4YhBEeeaupCoZX-ouA" name="getLogicaDoJogo" visibility="public" method="_wyO7AIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyOT8IhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyPiEIhBEeeaupCoZX-ouA" name="getModoDoJogo" visibility="public" method="_wyQJIYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyQJIIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyQwMIhBEeeaupCoZX-ouA" name="getNivelDificuldade" visibility="public" method="_wyRXQIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyQwMYhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_wyTzgIhBEeeaupCoZX-ouA" name="MecanicaDoJogoNivelHard" visibility="public">
+                  <generalization xmi:type="uml:Generalization" xmi:id="_wyUakIhBEeeaupCoZX-ouA" general="_wxUVAIhBEeeaupCoZX-ouA"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyVosIhBEeeaupCoZX-ouA" name="getTotalDePalavras" specification="_wyVBoIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return 12;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wybIQIhBEeeaupCoZX-ouA" name="MecanicaDoJogoNivelHard" specification="_wyVosYhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    setQtdPermitidaDeErros(3);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wycWYIhBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" specification="_wybvUIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return super.getQtdPermitidaDeErros();
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyeLkYhBEeeaupCoZX-ouA" name="getIsAssertivo" specification="_wyc9cIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    if (palavraNoJogo.equalsIgnoreCase(palavra)) {
+        this.getSomaPontuacao();
+        this.isAssertivo = true;
+        this.countDePalavras();
+    } else {
+        this.isAssertivo = false;
+    }
+    this.statusDoJogo();
+    return this.isAssertivo;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyfZsIhBEeeaupCoZX-ouA" name="statusDoJogo" specification="_wyeyoIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    if (this.getCountPalavras() >= this.getTotalDePalavras())
+        this.isFimDoJogo = true;
+    else
+        this.isFimDoJogo = false;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wygAwYhBEeeaupCoZX-ouA" name="getLogicaDoJogo" specification="_wyfZsYhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;SE DIVIRTA ADIVINHANDO &quot; + &quot;PALAVRAS COMPLEXAS EMBARALHADAS.&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyhO4IhBEeeaupCoZX-ouA" name="getReset" specification="_wygn0IhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    this.isAssertivo = false;
+    this.isNovaTentativa = true;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyh18YhBEeeaupCoZX-ouA" name="getModoDoJogo" specification="_wyhO4YhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;HARD&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wyjEEYhBEeeaupCoZX-ouA" name="getNivelDificuldade" specification="_wyidAIhBEeeaupCoZX-ouA">
+                    <language>JAVA</language>
+                    <body>
+    return &quot;10&quot;;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyVBoIhBEeeaupCoZX-ouA" name="getTotalDePalavras" visibility="public" method="_wyVosIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyVBoYhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyVosYhBEeeaupCoZX-ouA" name="MecanicaDoJogoNivelHard" visibility="public" method="_wybIQIhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wybvUIhBEeeaupCoZX-ouA" name="getQtdPermitidaDeErros" visibility="public" method="_wycWYIhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wybvUYhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+                    </ownedParameter>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyc9cIhBEeeaupCoZX-ouA" name="getIsAssertivo" visibility="public" method="_wyeLkYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wydkgIhBEeeaupCoZX-ouA" direction="return">
+                      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+                    </ownedParameter>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyeLkIhBEeeaupCoZX-ouA" name="palavra" type="_S_cnsIhBEeeaupCoZX-ouA"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyeyoIhBEeeaupCoZX-ouA" name="statusDoJogo" visibility="public" method="_wyfZsIhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyfZsYhBEeeaupCoZX-ouA" name="getLogicaDoJogo" visibility="public" method="_wygAwYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wygAwIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wygn0IhBEeeaupCoZX-ouA" name="getReset" visibility="public" method="_wyhO4IhBEeeaupCoZX-ouA"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyhO4YhBEeeaupCoZX-ouA" name="getModoDoJogo" visibility="public" method="_wyh18YhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyh18IhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_wyidAIhBEeeaupCoZX-ouA" name="getNivelDificuldade" visibility="public" method="_wyjEEYhBEeeaupCoZX-ouA">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyjEEIhBEeeaupCoZX-ouA" type="_S_cnsIhBEeeaupCoZX-ouA" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_1RZN8IhBEeeaupCoZX-ouA" name="fabrica">
+            <packagedElement xmi:type="uml:Class" xmi:id="_1RbDIIhBEeeaupCoZX-ouA" name="FabricaEmbaralhadores" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_1RbqMIhBEeeaupCoZX-ouA" name="lstEmbaralhadores" visibility="private" type="_S_XvMIhBEeeaupCoZX-ouA" isUnique="false">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1RcRQIhBEeeaupCoZX-ouA"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1RcRQYhBEeeaupCoZX-ouA" value="*"/>
+              </ownedAttribute>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1Rrh0IhBEeeaupCoZX-ouA" name="FabricaEmbaralhadores" specification="_1RcRQohBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    lstEmbaralhadores = new ArrayList&lt;IEmbaralhador>();
+    lstEmbaralhadores.add(new EmbaralhadorInverso());
+    lstEmbaralhadores.add(new EmbaralhadorAleatorio());
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1Rsv8YhBEeeaupCoZX-ouA" name="embaralhadorAutomatico" specification="_1RsI4IhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    return lstEmbaralhadores.get(new Random().nextInt(lstEmbaralhadores.size()));
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_1RcRQohBEeeaupCoZX-ouA" name="FabricaEmbaralhadores" visibility="public" method="_1Rrh0IhBEeeaupCoZX-ouA"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_1RsI4IhBEeeaupCoZX-ouA" name="embaralhadorAutomatico" visibility="public" method="_1Rsv8YhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Rsv8IhBEeeaupCoZX-ouA" type="_S_XvMIhBEeeaupCoZX-ouA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_1RulIIhBEeeaupCoZX-ouA" name="FabricaMecanicaDoJogo" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="_1R4WIYhBEeeaupCoZX-ouA" name="lstMecanicaDoJogo" visibility="private" type="_wxD2UIhBEeeaupCoZX-ouA" isUnique="false">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1R49MIhBEeeaupCoZX-ouA"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1R49MYhBEeeaupCoZX-ouA" value="*"/>
+              </ownedAttribute>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1R-cwIhBEeeaupCoZX-ouA" name="FabricaMecanicaDoJogo" specification="_1R49MohBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    lstMecanicaDoJogo = new ArrayList&lt;IMecanicaDoJogo>();
+    lstMecanicaDoJogo.add(new MecanicaDoJogoNivelHard());
+    lstMecanicaDoJogo.add(new MecanicaDoJogoNivelEasy());
+</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_1R_q4IhBEeeaupCoZX-ouA" name="embaralhadorAutomatico" specification="_1R_D0IhBEeeaupCoZX-ouA">
+                <language>JAVA</language>
+                <body>
+    return lstMecanicaDoJogo.get(new Random().nextInt(lstMecanicaDoJogo.size()));
+</body>
+              </ownedBehavior>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_1R49MohBEeeaupCoZX-ouA" name="FabricaMecanicaDoJogo" visibility="public" method="_1R-cwIhBEeeaupCoZX-ouA"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_1R_D0IhBEeeaupCoZX-ouA" name="embaralhadorAutomatico" visibility="public" method="_1R_q4IhBEeeaupCoZX-ouA">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_1R_D0YhBEeeaupCoZX-ouA" type="_wxD2UIhBEeeaupCoZX-ouA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_S_aygIhBEeeaupCoZX-ouA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_S_bZkIhBEeeaupCoZX-ouA" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_S_cAoIhBEeeaupCoZX-ouA" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_S_cnsIhBEeeaupCoZX-ouA" name="String"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_sV22UYhBEeeaupCoZX-ouA" name="io">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_sV3dYIhBEeeaupCoZX-ouA" name="IOException"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_S9YyMIhBEeeaupCoZX-ouA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S9anYIhBEeeaupCoZX-ouA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_S-Gj4IhBEeeaupCoZX-ouA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S-Gj4YhBEeeaupCoZX-ouA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_S-bUAIhBEeeaupCoZX-ouA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S-b7EIhBEeeaupCoZX-ouA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_TIaWcIhBEeeaupCoZX-ouA" name="java.lang.String" base_Classifier="_S_cnsIhBEeeaupCoZX-ouA"/>
+  <PapyrusJava:External xmi:id="_U3NakIhBEeeaupCoZX-ouA" name="com.leandroserra.modelo.IEmbaralhador" base_Classifier="_S_XvMIhBEeeaupCoZX-ouA"/>
+  <PapyrusJava:External xmi:id="_sV888IhBEeeaupCoZX-ouA" name="java.io.IOException" base_Classifier="_sV3dYIhBEeeaupCoZX-ouA"/>
+  <PapyrusJava:External xmi:id="_wxc34IhBEeeaupCoZX-ouA" name="IBancoDePalavras" base_Classifier="_t39iQIhBEeeaupCoZX-ouA"/>
+  <standard:Create xmi:id="_wxvy0IhBEeeaupCoZX-ouA" base_BehavioralFeature="_wxpFIIhBEeeaupCoZX-ouA"/>
+  <standard:Create xmi:id="_wyL3sIhBEeeaupCoZX-ouA" base_BehavioralFeature="_wyEi8IhBEeeaupCoZX-ouA"/>
+  <standard:Create xmi:id="_wyahMIhBEeeaupCoZX-ouA" base_BehavioralFeature="_wyVosYhBEeeaupCoZX-ouA"/>
+  <standard:Create xmi:id="_1RhJwIhBEeeaupCoZX-ouA" base_BehavioralFeature="_1RcRQohBEeeaupCoZX-ouA"/>
+  <PapyrusJava:External xmi:id="_1R4WIIhBEeeaupCoZX-ouA" name="com.leandroserra.regra.de.negocio.IMecanicaDoJogo" base_Classifier="_wxD2UIhBEeeaupCoZX-ouA"/>
+  <standard:Create xmi:id="_1R91sIhBEeeaupCoZX-ouA" base_BehavioralFeature="_1R49MohBEeeaupCoZX-ouA"/>
+</xmi:XMI>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.0" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.leandroserra.fabrica.FabricaEmbaralhadores" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/fabrica/FabricaEmbaralhadores.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="229" x="721" y="622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.leandroserra.fabrica.FabricaMecanicaDoJogo" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/fabrica/FabricaMecanicaDoJogo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="95" width="246" x="508" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.leandroserra.fases.Fase" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/fases/Fase.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="114" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.leandroserra.modelo.EmbaralhadorAleatorio" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/modelo/EmbaralhadorAleatorio.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="113" width="211" x="718" y="991"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.leandroserra.modelo.EmbaralhadorInverso" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/modelo/EmbaralhadorInverso.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="211" x="467" y="991"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="com.leandroserra.modelo.IEmbaralhador" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/modelo/IEmbaralhador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="211" x="950" y="1144"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="com.leandroserra.regra.de.negocio.ArquivoDePalavras" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/ArquivoDePalavras.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="113" width="198" x="1011" y="991"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.leandroserra.regra.de.negocio.BancoDePalavras" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/BancoDePalavras.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="149" width="216" x="1011" y="622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="com.leandroserra.regra.de.negocio.IBancoDePalavras" 
+    project="Tarefa-Semana6-OO" file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/IBancoDePalavras.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="216" x="1249" y="991"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="com.leandroserra.regra.de.negocio.IMecanicaDoJogo" 
+    project="Tarefa-Semana6-OO" file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/IMecanicaDoJogo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="329" width="173" x="508" y="622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="com.leandroserra.regra.de.negocio.MecanicaDoJogo" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/MecanicaDoJogo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="545" width="187" x="971" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="com.leandroserra.regra.de.negocio.MecanicaDoJogoNivelEasy" 
+    project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/MecanicaDoJogoNivelEasy.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="167" width="181" x="287" y="622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="com.leandroserra.regra.de.negocio.MecanicaDoJogoNivelHard" 
+    project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/regra/de/negocio/MecanicaDoJogoNivelHard.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="221" width="180" x="67" y="622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="com.leandroserra.utilitarios.Utilitarios" project="Tarefa-Semana6-OO" 
+    file="/Tarefa-Semana6-OO/src/com/leandroserra/utilitarios/Utilitarios.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="131" width="273" x="195" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <realization id="18">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="20">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="22">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="25">    
+    <bendpoint x="959" y="991"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="26" name="lstEmbaralhadores"/>      
+      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <bendpoint x="1257" y="622"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="29" name="bancoDePalavras"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="32" name="lstMecanicaDoJogo"/>      
+      <multiplicity id="33" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <association id="35">    
+    <bendpoint x="980" y="622"/>    
+    <bendpoint x="980" y="991"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="36" name="embaralhador"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="38">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <dependency id="39">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
